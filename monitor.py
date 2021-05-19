@@ -51,4 +51,5 @@ def create_dir():
 
 
 if __name__ == '__main__':
+    print("监控工具已启动，请查看日志文件。。。")
     start_monitor()
