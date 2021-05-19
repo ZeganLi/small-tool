@@ -1,3 +1,14 @@
-https://www.baidu.com
-https://www.iqiyi.com/
-http://www.biying.com/
+https://100.102.2.22:8080
+https://100.102.2.25:7001
+http://100.102.2.34:8080/hdadmin
+http://100.102.2.34:8088/fb-admin
+http://100.102.2.35:8080/rpc
+http://100.102.2.37:8088/rpc
+https://172.17.113.32:9090/hdadmin
+https://172.17.113.32:8089/metro
+http://172.17.113.32:8080/rpc
+https://172.17.113.223:6066/fb-admin
+http://100.102.2.52:8081
+http://172.17.113.42:8088/rpc
+https://172.17.113.47:8089/hdadmin
+http://100.102.2.34:8088/fb-admin

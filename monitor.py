@@ -28,12 +28,18 @@ def start_monitor():
         log_file = open(join, 'a+')
         log_file.writelines("读取到" + str(len(re_list)) + "个URL地址。" + "开始对其进行监控" + '\n')
         while True:
+            content = ""
             for re in re_list:
                 replace_re = re.replace('\n', '')
-                r = requests.get(replace_re)
-                content = log_content(r, replace_re)
-                log_file.write(content)
-                log_file.flush()
+                try:
+                    r = requests.get(replace_re,timeout=5)
+                    content = log_content(r.status_code, replace_re)
+                    log_file.write(content)
+                    log_file.flush()
+                except:
+                    content = log_content("连接失败！",replace_re)
+                    log_file.write(content)
+                    log_file.flush()
             time.sleep(2)
     except Exception as e:
         log_file.write(e.__context__ + '\n')
@@ -42,7 +48,7 @@ def start_monitor():
 
 
 def log_content(r, replace_re):
-    return str(get_current_time() + ":" + '\t'  + replace_re + '\t' + str(r.status_code) + '\n')
+    return str(get_current_time() + ":" + '\t'  + replace_re + '\t' + str(r) + '\n')
 
 
 def create_dir():
