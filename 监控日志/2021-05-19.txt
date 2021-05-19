@@ -1,0 +1,9 @@
+读取到3个URL地址。开始对其进行监控
+2021-05-19 08:45:45:	https://www.baidu.com	200
+2021-05-19 08:45:47:	https://www.iqiyi.com/	200
+2021-05-19 08:45:49:	http://www.biying.com/	200
+2021-05-19 08:45:52:	https://www.baidu.com	200
+2021-05-19 08:45:54:	https://www.iqiyi.com/	200
+2021-05-19 08:45:56:	http://www.biying.com/	200
+2021-05-19 08:45:59:	https://www.baidu.com	200
+2021-05-19 08:46:00:	https://www.iqiyi.com/	200
