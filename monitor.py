@@ -38,13 +38,12 @@ def start_monitor():
                     r = requests.get(replace_re,headers=headers,timeout=5,verify=False)
                     content = log_content(r.status_code, replace_re)
                     log_file.write(content)
-                    log_file.flush()
                 except Exception as e:
-                    # print(e)
                     content = log_content("连接失败！",replace_re)
                     log_file.write(content)
-                    log_file.flush()
-            time.sleep(2)
+            log_file.write("-"*80)
+            log_file.flush()
+            time.sleep(600)
     except Exception as e:
         log_file.write(e.__context__ + '\n')
     finally:
