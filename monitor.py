@@ -41,7 +41,7 @@ def start_monitor():
                 except Exception as e:
                     content = log_content("连接失败！",replace_re)
                     log_file.write(content)
-            log_file.write("-"*80)
+            log_file.write("-"*80 + "\n")
             log_file.flush()
             time.sleep(600)
     except Exception as e:
